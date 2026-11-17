@@ -134,7 +134,7 @@ const PROJECTS: ProjectChapter[] = [
     title: "UI Builder – Automatic Code Generation",
     company: "SLIIT · Final Year Research",
     period: "2023 · Group Project",
-    image: "/images/projects/project-5.png",
+    image: "/images/projects/project-6.png",
     imageAlt: "UI Builder – Automatic Code Generation from hand-drawn sketches",
     about:
       "A tool that converts hand-drawn UI sketches into application code for web, mobile and backend development.",
