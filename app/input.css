@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+:root {
+  --background: #03070d;
+  --foreground: #ffffff;
+  --cyan-primary: #00f0ff;
+  --cyan-accent: #22d3ee;
+  --cyan-glow: rgba(0, 240, 255, 0.4);
+  --card-bg: #09111c;
+  --card-border: rgba(0, 240, 255, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background-color: #03070d;
+}
+
+body {
+  background-color: #03070d;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #03070d;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f1c2e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
+/* Cyber Grids from Image 2 & 3 */
+.bg-feel-grid {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+}
+
+/* The Feel of ICT beam glow from top-left */
+.feel-beam-glow {
+  background: radial-gradient(circle at 10% 10%, rgba(0, 240, 255, 0.18) 0%, rgba(3, 7, 13, 0) 55%),
+              radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, rgba(3, 7, 13, 0) 50%);
+}
+
+/* Glow effects */
+.glow-cyan-box {
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+}
+.glow-cyan-strong {
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.55);
+}
+.text-cyan-glow {
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+}
+
+/* Cards matching image 3 */
+.feel-card {
+  background-color: #09111c;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.feel-card:hover {
+  border-color: rgba(0, 240, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.3);
+}
+
+.feel-banner {
+  background-color: #09111c;
+  border: 1.5px solid rgba(0, 240, 255, 0.45);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.18);
+}
+
+/* =========================================
+   BOOK PAGE-FLIP ANIMATIONS (3D)
+   ========================================= */
+
+/* Forward flip: right page folds to the left */
+@keyframes pageFlipOutFwd {
+  0%   { transform: perspective(1400px) rotateY(0deg);    opacity: 1;   }
+  60%  { transform: perspective(1400px) rotateY(-70deg);  opacity: 0.6; }
+  100% { transform: perspective(1400px) rotateY(-90deg);  opacity: 0;   }
+}
+@keyframes pageFlipInFwd {
+  0%   { transform: perspective(1400px) rotateY(90deg);   opacity: 0;   }
+  40%  { transform: perspective(1400px) rotateY(20deg);   opacity: 0.6; }
+  100% { transform: perspective(1400px) rotateY(0deg);    opacity: 1;   }
+}
+
+/* Backward flip: right page folds to the right */
+@keyframes pageFlipOutBwd {
+  0%   { transform: perspective(1400px) rotateY(0deg);    opacity: 1;   }
+  60%  { transform: perspective(1400px) rotateY(70deg);   opacity: 0.6; }
+  100% { transform: perspective(1400px) rotateY(90deg);   opacity: 0;   }
+}
+@keyframes pageFlipInBwd {
+  0%   { transform: perspective(1400px) rotateY(-90deg);  opacity: 0;   }
+  40%  { transform: perspective(1400px) rotateY(-20deg);  opacity: 0.6; }
+  100% { transform: perspective(1400px) rotateY(0deg);    opacity: 1;   }
+}
+
+/* Cover open/close transitions */
+@keyframes coverOpen {
+  0%   { transform: perspective(1200px) scale(1) rotateY(0deg);    opacity: 1; }
+  100% { transform: perspective(1200px) scale(0.92) rotateY(-25deg); opacity: 0; }
+}
+@keyframes coverClose {
+  0%   { transform: perspective(1200px) scale(0.92) rotateY(-25deg); opacity: 0; }
+  100% { transform: perspective(1200px) scale(1) rotateY(0deg);    opacity: 1; }
+}
+@keyframes spreadOpen {
+  0%   { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1);    opacity: 1; }
+}
+@keyframes spreadClose {
+  0%   { transform: scale(1);    opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0; }
+}
+
+.page-flip-out-fwd {
+  animation: pageFlipOutFwd 0.38s cubic-bezier(0.4, 0, 1, 1) forwards;
+  transform-origin: left center;
+}
+.page-flip-in-fwd {
+  animation: pageFlipInFwd 0.38s cubic-bezier(0, 0, 0.6, 1) forwards;
+  transform-origin: left center;
+}
+.page-flip-out-bwd {
+  animation: pageFlipOutBwd 0.38s cubic-bezier(0.4, 0, 1, 1) forwards;
+  transform-origin: right center;
+}
+.page-flip-in-bwd {
+  animation: pageFlipInBwd 0.38s cubic-bezier(0, 0, 0.6, 1) forwards;
+  transform-origin: right center;
+}
+.cover-opening {
+  animation: coverOpen 0.45s ease-in forwards;
+  transform-origin: left center;
+}
+.cover-closing {
+  animation: coverClose 0.45s ease-out forwards;
+  transform-origin: left center;
+}
+.spread-opening {
+  animation: spreadOpen 0.45s ease-out forwards;
+}
+.spread-closing {
+  animation: spreadClose 0.45s ease-in forwards;
+}
+
+/* =========================================
+   PAGE LOADER
+   ========================================= */
+@keyframes loaderPing {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  70%  { transform: scale(1.6); opacity: 0;   }
+  100% { transform: scale(1.6); opacity: 0;   }
+}
+@keyframes loaderDotsIn {
+  0%   { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0);   }
+}
+.loader-ping {
+  animation: loaderPing 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.loader-dots-in {
+  animation: loaderDotsIn 0.5s ease-out forwards;
+}
+

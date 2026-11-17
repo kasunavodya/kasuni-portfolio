@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build:css": "tailwindcss -i ./app/input.css -o ./app/globals.css --minify",
+    "dev:css": "tailwindcss -i ./app/input.css -o ./app/globals.css --watch",
     "dev": "next dev",
-    "build": "next build",
+    "build": "tailwindcss -i ./app/input.css -o ./app/globals.css --minify && next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -14,6 +16,8 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "@tailwindcss/postcss": "^4.3.5",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
