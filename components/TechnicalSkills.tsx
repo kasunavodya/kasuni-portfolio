@@ -94,6 +94,14 @@ export default function TechnicalSkills({ darkMode }: TechnicalSkillsProps) {
             </div>
           ),
         },
+        {
+          name: "Bootstrap",
+          icon: (
+            <div className="w-3.5 h-3.5 rounded bg-[#7952b3] flex items-center justify-center text-white font-black text-[9px] leading-none">
+              B
+            </div>
+          ),
+        },
       ],
     },
     {

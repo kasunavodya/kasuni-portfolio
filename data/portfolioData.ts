@@ -237,6 +237,7 @@ export const SKILL_GROUPS: SkillCategory[] = [
       { name: "JavaScript (ES6+)", level: "Advanced", context: "Async/await, closures, modern web APIs", tag: "Core" },
       { name: "Redux & State Management", level: "Proficient", context: "Complex client-side caching & state sync", tag: "State" },
       { name: "Tailwind CSS", level: "Advanced", context: "Responsive utility styling, custom themes & animations", tag: "Styling" },
+      { name: "Bootstrap", level: "Advanced", context: "Grid systems, responsive utility classes & rapid UI layout", tag: "Styling" },
     ],
   },
   {
