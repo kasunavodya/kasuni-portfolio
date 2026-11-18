@@ -128,7 +128,9 @@ export default function Hero({ darkMode }: HeroProps) {
               </a>
               <span className="text-slate-600 hidden xs:inline">|</span>
               <a
-                href={`mailto:${PERSONAL_INFO.email}`}
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${PERSONAL_INFO.email}`}
+                target="_blank"
+                rel="noreferrer"
                 className={`transition-colors flex items-center gap-1.5 ${darkMode ? "hover:text-cyan-300" : "hover:text-cyan-700"
                   }`}
               >
@@ -162,9 +164,9 @@ export default function Hero({ darkMode }: HeroProps) {
                 <div className="absolute inset-0 rounded-full border-2 border-cyan-400/40 pointer-events-none" />
               </div>
 
-              {/* "Available to connect" Badge (Directly matching Image 1!) */}
+              {/* "Available for new opportunities" Badge */}
               <div
-                className={`absolute bottom-2 right-4 sm:bottom-4 sm:right-6 px-4 py-2 rounded-2xl flex items-center gap-2.5 shadow-[0_10px_25px_rgba(0,0,0,0.8)] border transition-all ${darkMode
+                className={`absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 sm:left-auto sm:right-6 sm:translate-x-0 px-4 py-2 rounded-2xl flex items-center gap-2.5 shadow-[0_10px_25px_rgba(0,0,0,0.8)] border transition-all whitespace-nowrap z-20 ${darkMode
                   ? "bg-[#09111c] border-slate-700/80 text-white"
                   : "bg-white border-slate-300 text-slate-900"
                   }`}

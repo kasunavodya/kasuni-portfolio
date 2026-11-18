@@ -80,7 +80,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               <span>|</span>
               <a href={`tel:${PERSONAL_INFO.phone}`} className="hover:underline">{PERSONAL_INFO.phone}</a>
               <span>|</span>
-              <a href={`mailto:${PERSONAL_INFO.email}`} className="hover:underline">{PERSONAL_INFO.email}</a>
+              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${PERSONAL_INFO.email}`} target="_blank" rel="noreferrer" className="hover:underline">{PERSONAL_INFO.email}</a>
               <span>|</span>
               <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noreferrer" className="hover:underline">{PERSONAL_INFO.linkedinDisplay}</a>
               <span>|</span>

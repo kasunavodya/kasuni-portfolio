@@ -147,7 +147,7 @@ export default function AntigravityConsole() {
       resultNode = (
         <div className="space-y-1 text-xs font-mono">
           <p className="text-cyan-300 font-bold">&gt; Direct Coordinates:</p>
-          <p>Email: <a href={`mailto:${PERSONAL_INFO.email}`} className="text-cyan-400 underline">{PERSONAL_INFO.email}</a></p>
+          <p>Email: <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${PERSONAL_INFO.email}`} target="_blank" rel="noreferrer" className="text-cyan-400 underline">{PERSONAL_INFO.email}</a></p>
           <p>Phone: <span className="text-slate-200">{PERSONAL_INFO.phone}</span></p>
           <p>Location: <span className="text-slate-200">Gothenburg, Sweden</span></p>
           <p>LinkedIn: <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noreferrer" className="text-cyan-400 underline">{PERSONAL_INFO.linkedinDisplay}</a></p>

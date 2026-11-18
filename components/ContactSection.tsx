@@ -56,7 +56,9 @@ export default function ContactSection({ darkMode }: ContactSectionProps) {
                     EMAIL
                   </span>
                   <a
-                    href={`mailto:${PERSONAL_INFO.email}`}
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${PERSONAL_INFO.email}`}
+                    target="_blank"
+                    rel="noreferrer"
                     className={`text-xs sm:text-sm font-mono truncate hover:text-cyan-400 transition-colors ${darkMode ? "text-white" : "text-slate-900"
                       }`}
                   >
@@ -145,7 +147,9 @@ export default function ContactSection({ darkMode }: ContactSectionProps) {
             {/* Bottom Buttons (Matching Image 4: "Start a conversation" + "Download CV") */}
             <div className="pt-3 sm:pt-4 flex flex-wrap items-center gap-3 sm:gap-4">
               <a
-                href={`mailto:${PERSONAL_INFO.email}`}
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${PERSONAL_INFO.email}`}
+                target="_blank"
+                rel="noreferrer"
                 className="w-full sm:w-auto justify-center px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-[0_0_25px_rgba(0,210,239,0.55)] hover:shadow-[0_0_35px_rgba(0,210,239,0.8)] transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
               >
                 <span>Start a Conversation</span>
